@@ -60,9 +60,9 @@ namespace NovaKeep.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(teams);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+            _context.Add(teams);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
             }
             ViewData["GameId"] = new SelectList(_context.Games, "GameId", "GameName", teams.GameId);
             return View(teams);

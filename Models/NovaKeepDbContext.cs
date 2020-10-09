@@ -68,7 +68,7 @@ namespace NovaKeep.Models
                     .WithMany(p => p.Characters)
                     .HasForeignKey(d => d.TeamId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_team_id");
+                    .HasConstraintName("FK_Characters_Teams");
             });
 
             modelBuilder.Entity<Games>(entity =>
