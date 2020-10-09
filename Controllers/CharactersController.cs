@@ -64,7 +64,7 @@ namespace NovaKeep.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            //ViewData["TeamId"] = new SelectList(_context.Teams, "TeamId", "TeamName", characters.TeamId);
+            ViewData["TeamId"] = new SelectList(_context.Teams, "TeamId", "TeamName", characters.TeamId);
             return View(characters);
         }
 
